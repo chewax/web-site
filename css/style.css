@@ -268,9 +268,12 @@ hr {
 
 .section-heading h2 {
 	font-size: 40px;
+    color: #fafafa;
 }
+
 .section-heading i {
 	margin-bottom: 20px;
+    color: #fafafa;
 }
 
 
@@ -284,9 +287,9 @@ hr {
 	background: #f8f8f8;
 }
 
-
 .bg-dark {
-	background: #575757;
+	background: #051a37;
+    color: #fafafa;
 }
 
 /* --- section color var --- */
@@ -349,7 +352,7 @@ hr {
 }
 
 .intro .slogan h4 {
-	color: #fff;
+	color: #fafafa;
 	text-shadow: -1px 1px 1px #000;
 }
 
@@ -357,10 +360,9 @@ hr {
 /* ===========================
 --- About
 ============================ */
-
 .boxed-grey {
-	background: #f9f9f9;
-	padding: 20px;
+	background: #37465d;
+	padding: 20px;    
 }
 
 .team h5 {
@@ -427,7 +429,6 @@ hr {
 /* ===========================
 --- Services
 ============================ */
-
 .service-icon {
 	margin-bottom: 20px;
 }
@@ -444,7 +445,9 @@ form#contact-form .form-group label {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 12px;
+    color: #fafafa;
 }
+
 form#contact-form input,form#contact-form select,form#contact-form textarea {
 	border-radius: 0;
 	border: 1px solid #eee;
@@ -464,6 +467,8 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 
 .widget-contact {
 	text-align: left;
+/*    color: #adadad;*/
+    color: #fafafa;
 }
 
 
@@ -524,11 +529,10 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 footer {
 	text-align: center;
 	padding: 50px 0 ;
-  background: url(/img/ft1.jpg) no-repeat bottom center;
 }
 
 footer p {
-	color: #f8f8f8;
+	color: #fafafa;
 }
 
 /* ==========================
@@ -610,19 +614,19 @@ Parallax
 .btn-circle:focus {
     outline: 0;
     color: #fff;
-    background: rgba(255,255,255,.1);
+    background: #669d17;
 }
 
 .btn-circle.btn-dark :hover,
 .btn-circle.btn-dark :focus {
     outline: 0;
-    color: #999;
-    background: #fff;
+    color: #669d17;
+    background: #fafafa;
 }
 
 .btn-circle.btn-dark :hover i,
 .btn-circle.btn-dark :focus i{
-    color: #999;
+    color: #669d17;
 }
 
 .page-scroll .btn-circle i.animated {
@@ -787,9 +791,31 @@ Parallax
 		height: 40px;
 		margin-top: 10px;
 		padding: 7px 0;
-		border: 2px solid #fff;
+		border: 2px solid #fafafa;
 		border-radius: 50%;
 		font-size: 20px;
 	}
 
+}
+
+
+/* CUSTOM */
+
+#footer-img{
+    top: 0;
+    left: 0;
+    z-index: -999;
+    position:absolute;
+}
+
+.footer-tweak{
+    position: relative;
+}
+
+.custom-footer{
+    margin-top: 200px;
+}
+
+.custom-footer p{
+    color: #fafafa;
 }
