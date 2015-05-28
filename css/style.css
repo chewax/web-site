@@ -27,12 +27,14 @@ h6 {
     font-family: Montserrat,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    color: rgb(233, 233, 233);
 }
 
 p {
     margin: 0 0 20px;
     font-size: 16px;
     line-height: 1.6em;
+    color: rgb(233, 233, 233);
 }
 
 p.lead {
@@ -288,8 +290,7 @@ hr {
 }
 
 .bg-dark {
-	background: #051a37;
-    color: #fafafa;
+	background: url(../img/galaxyBackground.png) repeat top center;
 }
 
 /* --- section color var --- */
@@ -297,7 +298,10 @@ hr {
 .text-light {
 	color: #fff;
 }
-
+.contact-container {
+  background: rgba(249, 249, 249, 0.25);
+  padding: 20px;
+}
 
 /*#contact{
   background: url(/img/ft1.jpg) no-repeat bottom center;
@@ -360,6 +364,15 @@ hr {
 /* ===========================
 --- About
 ============================ */
+
+#about {
+  background: url(../img/galaxyBackground.png) repeat top center;
+}
+
+.about-item {
+  padding: 20px;
+}
+
 .boxed-grey {
 	background: #37465d;
 	padding: 20px;    
@@ -433,11 +446,20 @@ hr {
 	margin-bottom: 20px;
 }
 
+#service {
+  background: url(../img/galaxyBackground.png) repeat top center;
+}
+
 
 
 /* ===========================
 --- Contact
 ============================ */
+
+#contact {
+  background: url(../img/galaxyBackground.png) repeat top center;
+  padding-bottom: 0;
+}
 
 form#contact-form .form-group label {
 	text-align: left !important;
@@ -813,7 +835,7 @@ Parallax
 }
 
 .custom-footer{
-    margin-top: 200px;
+    margin-top: 350px;
 }
 
 .custom-footer p{
