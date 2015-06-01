@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/games/superhero/css/style.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        WebFontConfig = {
+            custom: { families: ['saranaigamebold'], urls: [ '/css/style.css' ] }
+        };
+
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = "/games/superhero/lib/webfontloader.js";
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+
+    </script>
+
+    <script type="text/javascript" src="/games/superhero/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/games/superhero/lib/phaser.min.js"></script>
+    <script type="text/javascript" src="/games/superhero/build/output.min.js"></script>
+
+</body>
+</html>

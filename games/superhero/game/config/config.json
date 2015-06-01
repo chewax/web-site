@@ -1,0 +1,371 @@
+{
+  "WORLD": {
+    "width": 1200,
+    "height": 550,
+    "sprite_scaling": 0.3
+  },
+
+  "PHYSICS": {
+    "global": {
+      "gravity": {
+        "x": 0,
+        "y": 0
+      }
+    },
+
+    "player": {
+      "gravity": {
+        "x": 0,
+        "y": 0
+      },
+      "drag": 700
+    },
+
+    "npc": {
+      "gravity": {
+        "x": 0,
+        "y": 1500
+      },
+      "drag": 1500
+    }
+  },
+
+  "PLAYERISIMMORTAL": true,
+
+  "PLAYERDIEOUTOFBOUNDS": false,
+  
+  "ISMUSICENABLED": true,
+
+  "FIRSTTIMEPLAYING": true,
+
+  "GAMEVERSION": "1.0",
+
+
+  "ENEMIES": {
+    "multiplier": 0.1,
+    "respawnLapse": 5000,
+    "shootDelay": 5000,
+    "bulletSpeed": 400,
+    "maxBulletSpeed": 1100,
+    "spawnCoordinates": {
+      "patrol": {
+        "top": {
+          "x": 150,
+          "y": 20
+        },
+        "down": {
+          "x": 150
+        }
+      },
+      "steady": {
+        "top": {
+          "x": 150
+        },
+        "down": {
+          "x": 150
+        }
+      }
+    },
+    "patrolTweenSpeed": 1500,
+
+    "levels": {
+      "level1": ["badie", "smallMissileEnemy", "twoHandedWeapon", "miniBoss", "tentabot01"],
+      "Intro": ["twoHandedWeapon", "miniBoss"]
+    }
+  },
+
+  "CHARACTERSCOLLECTION": {
+
+    "hero1": {
+      "mainSprite": "stand1",
+      "childSprites": "",
+      "isImmortal": false,
+      "shields": 0,
+      "minShootDelay": 1515,
+      "idleAnimation": "flystill",
+      "respawnDelay": 5000,
+      "animations": {
+        "flystill": {"frames" :["stand1", "stand2"], "frameRate": 8,"loop": true, "useNumericIndex": false},
+        "shoot": {"frames" :["shoot1","shoot2", "shoot3", "shoot4"], "frameRate": 10, "loop": false, "useNumericIndex": false},
+        "flywalk": {"frames" :["walk1","walk2"], "frameRate": 6, "loop": true, "useNumericIndex": false},
+        "fly": {"frames" :["fly1","fly2"], "frameRate": 8, "loop": true, "useNumericIndex": false},
+        "takehit": {"frames" :["hit1","hit2", "hit3", "hit4"], "frameRate": 4, "loop": false, "useNumericIndex": false},
+        "stop": {"frames" :["hit1"], "frameRate": 3, "loop": false, "useNumericIndex": false},
+        "run": {"frames" :["walk1","walk2"], "frameRate": 6, "loop": true, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 0.3,
+      "diesOutOfBounds": false,
+      "firePower": 1,
+      "bullets": {
+        "qty": 4,
+        "key": "bullets",
+        "frame":"bullet1",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "fireSound": "heroFire",
+      "fireVolume": 0.1,
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1
+    },
+    "herowalking":{
+      "mainSprite": "walk1",
+      "childSprites": "",
+      "isImmortal": false,
+      "shields": 0,
+      "minShootDelay": 1515,
+      "idleAnimation": "run",
+      "respawnDelay": 5000,
+      "animations": {
+        "flystill": {"frames" :["stand1", "stand2"], "frameRate": 8,"loop": true, "useNumericIndex": false},
+        "shoot": {"frames" :["shoot1","shoot2", "shoot3", "shoot4"], "frameRate": 10, "loop": false, "useNumericIndex": false},
+        "flywalk": {"frames" :["walk1","walk2"], "frameRate": 6, "loop": true, "useNumericIndex": false},
+        "fly": {"frames" :["fly1","fly2"], "frameRate": 8, "loop": true, "useNumericIndex": false},
+        "takehit": {"frames" :["hit1","hit2", "hit3", "hit4"], "frameRate": 4, "loop": false, "useNumericIndex": false},
+        "stop": {"frames" :["hit1"], "frameRate": 3, "loop": false, "useNumericIndex": false},
+        "run": {"frames" :["walk1","stand1", "walk2"], "frameRate": 6, "loop": true, "useNumericIndex": false},
+        "stopWalking": {"frames" :["walk1"], "frameRate": 6, "loop": true, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 0.3,
+      "diesOutOfBounds": false,
+      "firePower": 1,
+      "bullets": {
+        "qty": 4,
+        "key": "bullets",
+        "frame":"bullet1",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1,
+      "fireSound": "heroFire",
+      "fireVolume": 0.5
+    },
+
+
+    "badie": {
+      "mainSprite": "stand1",
+      "childSprites": "",
+      "isImmortal": false,
+      "shields": 0,
+      "minShootDelay": 1515,
+      "idleAnimation": "flystill",
+      "respawnDelay": 500,
+      "animations": {
+        "flystill": {"frames" :["stand1", "stand2"], "frameRate": 8,"loop": true, "useNumericIndex": false},
+        "shoot": {"frames" :["shoot1","shoot2", "shoot3", "shoot4"], "frameRate": 10, "loop": false, "useNumericIndex": false},
+        "flywalk": {"frames" :["walk1","walk2"], "frameRate": 6, "loop": true, "useNumericIndex": false},
+        "fly": {"frames" :["fly1","fly2"], "frameRate": 8, "loop": true, "useNumericIndex": false},
+        "takehit": {"frames" :["hit1","hit2", "hit3", "hit4"], "frameRate": 4, "loop": false, "useNumericIndex": false},
+        "stop": {"frames" :["hit1"], "frameRate": 3, "loop": false, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 0.3,
+      "bulletScale": 1,
+      "diesOutOfBounds": true,
+      "firePower": 1,
+      "shootAnimationFrames": 6,
+      "dropsSmoke": false,
+      "bullets": {
+        "qty": 4,
+        "key": "bullets",
+        "frame":"arrow1",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1,
+      "fireSound": "badieFire",
+      "fireVolume": 0.5,
+      "availableSince": 1
+    },
+
+    "tentabot01": {
+      "mainSprite": "tentabot01",
+      "childSprites": "",
+      "isImmortal": false,
+      "shields": 3,
+      "minShootDelay": 1515,
+      "idleAnimation": "flystill",
+      "respawnDelay": 200,
+      "animations": {
+        "flystill": {"frames" :["tentabot01","tentabot02", "tentabot03", "tentabot04", "tentabot05", "tentabot04", "tentabot03", "tentabot02"], "frameRate": 8,"loop": true, "useNumericIndex": false},
+        "shoot": {"frames": ["fire01","fire02", "fire03", "fire02"], "frameRate": 4, "loop": false, "useNumericIndex": false},
+        "takehit": {"frames" :["takehit01","takehit02", "takehit03", "takehit04"], "frameRate": 4, "loop": false, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 1,
+      "diesOutOfBounds": true,
+      "firePower": 4,
+      "shootAnimationFrames": 4,
+      "dropsSmoke": true,
+      "bulletScale": 1,
+      "bullets": {
+        "qty": 4,
+        "key": "tentabot01",
+        "frame":"withoutFire",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "missiles": [
+        {"x": 55, "y": 60},
+        {"x": -68, "y": 25},
+        {"x": -29, "y": 140},
+        {"x": -98, "y": 100}
+      ],
+      "fireSound": "tentaBotFire",
+      "fireVolume": 1,
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1,
+      "availableSince": 320000
+    },
+
+    "twoHandedWeapon": {
+      "mainSprite": "idle01",
+      "childSprites": "",
+      "isImmortal": false,
+      "minShootDelay": 1515,
+      "idleAnimation": "flystill",
+      "respawnDelay": 200,
+      "shields": 4,
+      "animations": {
+        "flystill": {"frames" :["idle01", "idle02", "idle03", "idle02"], "frameRate": 4,"loop": true, "useNumericIndex": false},
+        "shootRightWhenDown": {"frames" :["fireRight01","fireRight02", "fireRight03", "fireRight04", "fireRight05UP", "fireRight06", "fireRight04", "fireRight03", "fireRight02", "fireRight01"], "frameRate": 10, "loop": false, "useNumericIndex": false},
+        "shootRightWhenUp": {"frames" :["fireRight01","fireRight02", "fireRight03", "fireRight04", "fireRight05DOWN", "fireRight06", "fireRight04", "fireRight03", "fireRight02", "fireRight01"], "frameRate": 10, "loop": false, "useNumericIndex": false},
+        "shootLeft": {"frames" :["idle02", "idle03", "fireLeft03", "fireLeft04", "fireLeft05", "fireLeft04", "fireLeft03", "idle03", "idle02"], "frameRate": 9, "loop": false, "useNumericIndex": false},
+        "takehit": {"frames" :["die01","die02", "die03", "die04"], "frameRate": 4, "loop": false, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 0.7,
+      "diesOutOfBounds": true,
+      "firePower": 1,
+      "shootAnimationFrames": 6,
+      "dropsSmoke": true,
+      "bulletScale": 1,
+      "bullets": {
+        "qty": 4,
+        "key": "bullets",
+        "frame":"arrow1",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "fireSound": "twoHandedFire",
+      "fireVolume": 1,
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1,
+      "availableSince": 520000
+    },
+
+    "miniBoss": {
+      "mainSprite": "idle01",
+      "childSprites": "",
+      "shields": 5,
+      "isImmortal": false,
+      "minShootDelay": 1515,
+      "respawnDelay": 200,
+      "idleAnimation": "flystill",
+      "animations": {
+        "flystill": {"frames" :["idle01", "idle02", "idle03", "idle04", "idle03", "idle02"], "frameRate": 6,"loop": true, "useNumericIndex": false},
+        "shoot": {"frames": ["fire01","fire02", "fire03", "fire04", "fire04", "fire05", "fire06", "fire06", "fire06", "fire06", "fire06", "fire06", "fire06", "fire07", "fire07", "fire07","fire07","fire06", "fire05", "fire04", "fire03", "fire02"], "frameRate": 6, "loop": false, "useNumericIndex": false},
+        "takehit": {"frames" :["die01","die02", "die03", "die04", "die05", "die06", "die07"], "frameRate": 7, "loop": false, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 0.7,
+      "diesOutOfBounds": true,
+      "firePower": 1,
+      "shootAnimationFrames": 14,
+      "dropsSmoke": false,
+      "bulletScale": 1,
+      "bullets": {
+        "qty": 4,
+        "key": "miniBoss",
+        "frame":"blueBeam",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "fireSound": "miniBossFire",
+      "fireVolume": 0.5,
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1,
+      "availableSince": 620000
+    },
+    "smallMissileEnemy": {
+      "mainSprite": "idle1",
+      "childSprites": "",
+      "isImmortal": false,
+      "respawnDelay": 500,
+      "minShootDelay": 1515,
+      "idleAnimation": "flystill",
+      "animations": {
+        "flystill": {"frames" :["warning", "", "warning", ""], "frameRate": 50,"loop": true, "useNumericIndex": false},
+        "shoot": {"frames": ["idle1","idle2", "idle3", "idle2"], "frameRate": 6, "loop": false, "useNumericIndex": false},
+        "takehit": {"frames" :["die1","die2", "die3", "die4"], "frameRate": 4, "loop": false, "useNumericIndex": false}
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "scale": 0.7,
+      "diesOutOfBounds": true,
+      "firePower": 1,
+      "shootAnimationFrames": 14,
+      "dropsSmoke": false,
+      "bulletScale": 1,
+      "bullets": {
+        "qty": 4,
+        "key": "smallMissileEnemy",
+        "frame":"warning",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "fireSound": "smallMissileFire",
+      "fireVolume": 0.5,
+      "hitSound": "enemyHit",
+      "hitSoundVolume": 1,
+      "availableSince": 520000
+    }
+  },
+
+  "POWERUPS": {
+    "nukes": 0,
+    "timeWarps": 0,
+    "rockets": 0
+  },
+
+  "SCOREBOARD": [],
+  "TOPSCORE": 0
+}

@@ -303,10 +303,6 @@ hr {
   padding: 20px;
 }
 
-/*#contact{
-  background: url(/img/ft1.jpg) no-repeat bottom center;
-}*/
-
 /* ===========================
 --- Intro
 ============================ */
@@ -314,8 +310,8 @@ hr {
 .intro {
 	width:100%;
 	position:relative;
-
-	background: url(../img/bg1.jpg) no-repeat top center;
+	background: url(../img/galaxyBackground.png) repeat top center;
+    z-index: 2;
 }
 
 #intro.intro {
@@ -324,6 +320,7 @@ hr {
 
 .intro .slogan {
 	text-align: center;
+    z-index: 2;
 
 }
 
@@ -366,7 +363,8 @@ hr {
 ============================ */
 
 #about {
-  background: url(../img/galaxyBackground.png) repeat top center;
+/*  background-image: url(../img/planet1.png) no-repeat bottom right;*/
+    position: relative;
 }
 
 .about-item {
@@ -447,7 +445,8 @@ hr {
 }
 
 #service {
-  background: url(../img/galaxyBackground.png) repeat top center;
+    background: url(../img/galaxyBackground.png) repeat top center;
+    position: relative;
 }
 
 
@@ -457,8 +456,8 @@ hr {
 ============================ */
 
 #contact {
-  background: url(../img/galaxyBackground.png) repeat top center;
-  padding-bottom: 0;
+    background: url(../img/galaxyBackground.png) repeat top center;
+    position: relative;
 }
 
 form#contact-form .form-group label {
@@ -472,9 +471,9 @@ form#contact-form .form-group label {
 
 form#contact-form input,form#contact-form select,form#contact-form textarea {
 	border-radius: 0;
-	border: 1px solid #eee;
-  -webkit-box-shadow: none;
-          box-shadow:  none;
+    border: 1px solid #eee;
+    -webkit-box-shadow: none;
+    box-shadow:  none;
 }
 
 form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
@@ -778,8 +777,7 @@ Parallax
     .intro-text {
         font-size: 25px;
     }
-
-
+    
 }
 @media (max-width:768px) {
 
@@ -790,7 +788,7 @@ Parallax
 	.boxed-grey {
 		margin-bottom: 30px;
 	}
-
+    
 
 }
 
@@ -817,27 +815,86 @@ Parallax
 		border-radius: 50%;
 		font-size: 20px;
 	}
+    
+}
 
+@media(min-width:1279px){
+    .custom-footer{
+        margin-top: 350px;
+    }
+}
+
+@media (max-width:1280px) {
+    .asset{
+        display: none;
+    }
+    
 }
 
 
 /* CUSTOM */
 
 #footer-img{
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: -999;
     position:absolute;
+    width: 100%;
 }
 
 .footer-tweak{
     position: relative;
 }
 
-.custom-footer{
-    margin-top: 350px;
-}
-
 .custom-footer p{
     color: #fafafa;
+}
+
+.x-left{
+   left: -50px; 
+}
+
+.x-center-left{
+   left: 100px; 
+}
+
+.x-center{
+  position:absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.x-center-right{
+    right: 100px;
+}
+
+.x-right{
+    right: 10px;
+}
+
+.y-top {
+    top: 0px; 
+}
+
+.y-center-top {
+    top: 100px;
+}
+
+.y-center {
+    vertical-align: middle;
+}
+
+.y-center-bottom{
+    bottom: 50px;
+}
+
+.y-bottom{
+    bottom: 0px;
+}
+
+
+.asset {
+    position:absolute;
+    z-index: -1;
 }
