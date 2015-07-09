@@ -898,3 +898,13 @@ Parallax
     position:absolute;
     z-index: -1;
 }
+
+.logo {
+    max-width:40%;
+    height:auto;
+}
+
+
+.top-buffer {
+    margin-top: 50px;
+}
