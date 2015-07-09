@@ -910,6 +910,10 @@ Parallax
 }
 
 .offset-bottom {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
+
+.offset-top {
+    margin-top: 50px;
+}
