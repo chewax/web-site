@@ -900,7 +900,7 @@ Parallax
 }
 
 .logo {
-    max-width:40%;
+    max-width:50%;
     height:auto;
 }
 
@@ -908,3 +908,8 @@ Parallax
 .top-buffer {
     margin-top: 50px;
 }
+
+.offset-bottom {
+    margin-bottom: 30px;
+}
+
